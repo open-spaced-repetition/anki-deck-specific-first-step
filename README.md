@@ -4,7 +4,16 @@ A custom scheduling script for Anki that allows you to configure deck-specific f
 
 ## Overview
 
-Anki's default learning steps configuration doesn't allow you to set a custom interval for the first "Hard" button press on new cards. This script solves that limitation by enabling deck-specific configuration of the first learning step for "Again", "Hard", and "Good" buttons on new cards. See the [Anki documentation on Learning Steps](https://docs.ankiweb.net/deck-options.html?highlight=custom#learning-steps) for more information.
+Anki's default learning steps configuration doesn't allow you to set a custom interval for the first "Hard" button press on new cards. This script solves that limitation by enabling deck-specific configuration of the first learning step for "Again", "Hard", and "Good" buttons on new cards.
+
+### Default Behavior
+
+In Anki's default Learning Steps configuration (e.g., `1m 10m`), when you press buttons on a new card:
+- **Again**: Returns to the first step (1m)
+- **Hard**: Uses the average of the first two steps (6m = (1+10)/2)
+- **Good**: Moves directly to the second step (10m)
+
+The limitation is that you cannot customize the first "Hard" or "Good" intervals independently, and you cannot set different first intervals for different decks. See the [Anki documentation on Learning Steps](https://docs.ankiweb.net/deck-options.html?highlight=custom#learning-steps) for more information.
 
 ## Features
 
